@@ -1,6 +1,3 @@
-array = ["House_of_Yes", "Mad_Men", "TLW"] 
-#puts array.sample
-#puts "#{array}"
 puts "Add, random, or display?"
 choice = gets.chomp.downcase
 case choice
