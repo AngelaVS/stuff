@@ -7,6 +7,9 @@ case choice
 when 'add'
 puts "What movie do you want to add?"
 	x = gets.chomp
+	somefile = File.open("arraystarter.rb", "a")
+somefile.puts "#{x}"
+somefile.close  
 def update
 	array << x
 end
@@ -14,5 +17,6 @@ end
 when 'random'
 puts "#{array.sample}"
 when 'display'
-puts "#{array}"
+File.open('arraystarter.rb').each_line{ |s|
+  puts s}
 end
