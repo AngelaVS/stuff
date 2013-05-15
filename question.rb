@@ -4,9 +4,9 @@ case choice
 when 'add'
 puts "What media do you want to add?"
 	x = gets.chomp
-	somefile = File.open("arraystarter.rb", "a")
-    somefile.puts "#{x}"
-    somefile.close  
+	library = File.open("arraystarter.rb", "a")
+    library.puts "#{x}"
+    library.close  
 	puts "#{x} added!"
 when 'random' 
 def random_film
