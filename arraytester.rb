@@ -1,2 +1,6 @@
-require_relative 'arraystarter'
-puts array
+
+file = File.new("arraystarter.rb", "r")
+while (line = file.gets)
+puts "#{line}"
+end
+file.close
