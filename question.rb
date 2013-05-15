@@ -1,21 +1,18 @@
-array = ["House_of_Yes", "Mad_Men", "TLW"] 
-#puts array.sample
-#puts "#{array}"
 puts "Add, random, or display?"
 choice = gets.chomp.downcase
 case choice
 when 'add'
-puts "What movie do you want to add?"
+puts "What media do you want to add?"
 	x = gets.chomp
 	somefile = File.open("arraystarter.rb", "a")
-somefile.puts "#{x}"
-somefile.close  
-def update
-	array << x
-end
+    somefile.puts "#{x}"
+    somefile.close  
 	puts "#{x} added!"
-when 'random'
-puts "#{array.sample}"
+when 'random' 
+def random_film
+  File.readlines("arraystarter.rb").sample
+end
+puts "Try watching #{random_film}"
 when 'display'
 File.open('arraystarter.rb').each_line{ |s|
   puts s}
