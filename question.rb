@@ -8,17 +8,11 @@ when 'add'
 puts "What movie do you want to add?"
 	x = gets.chomp
 def update
-	array.push.x!
+	array << x
 end
 	puts "#{x} added!"
 when 'random'
 puts "#{array.sample}"
 when 'display'
 puts "#{array}"
-end
-puts "What next?"
-whatsnext = gets.chomp
-when 'display'
-puts "#{array}"
-end
 end
