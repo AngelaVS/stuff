@@ -7,7 +7,10 @@ File.open("arraystarter.rb").each { |line|
   intent = gets.chomp.downcase
   case intent
   when 'yes'
-   puts "#{line} deleted!"
+  puts "#{line} deleted"
+	content_array = IO.readlines("arraystarter.rb")
+	content_array.delete(line)
+  puts content_array
   when 'no'
   puts "Nevermind, then."
   end
