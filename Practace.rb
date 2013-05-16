@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
-puts "Text to search through: "
-text = gets.chomp
+content_array = IO.readlines("arraystarter.rb")
 
+content_array.delete('TLW')
+puts content_array
