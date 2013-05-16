@@ -1,4 +1,4 @@
-puts "Add, random, or display?"
+puts "Add, random, delete or display?"
 choice = gets.chomp.downcase
 case choice
 when 'add'
@@ -16,4 +16,23 @@ puts "Try watching #{random_film}"
 when 'display'
 File.open('arraystarter.rb').each_line{ |s|
   puts s}
-end
+ when 'delete'
+puts "Enter media to delete";
+characters = gets.chomp;
+
+File.open("arraystarter.rb").each { |line| 
+  unless characters.each_char.map  { |c| line.include?(c) }.include? false
+    puts "Did you mean #{line}?";
+  intent = gets.chomp.downcase
+  case intent
+  when 'yes'
+  puts "#{line} deleted"
+	content_array = IO.readlines("arraystarter.rb")
+	content_array.delete(line)
+  puts content_array
+  when 'no'
+  puts "Nevermind, then."
+  end
+  end
+ }
+ end
